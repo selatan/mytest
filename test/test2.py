@@ -14,9 +14,16 @@ p.sayHi()
 
 
 
-def sayHi(self,name): 
-print "Hello, my name is, %s"%(name)  
-p = Person() p.sayHi("hehe")      
+# def sayHi(self,name): 
+# print "Hello, my name is, %s"%(name)  
+# p = Person() p.sayHi("hehe")      
+
+
+def sayHi(self,name):
+    print "Hello,my name is,%s"%s(name)
+
+
+
 
 
 
