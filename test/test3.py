@@ -29,3 +29,28 @@ n = 100
 x100 = x1 + (n-1)*d
 s = n*(x1+x100)/2
 print s
+
+
+s1 = 'Python was started in 1989 by "Guido".\nPython is free and easy to learn.'
+
+print s1
+
+print ur'''静夜思
+床前明月光
+疑是地上霜
+举头望明月
+低头思故乡'''
+
+
+a = 'python'
+print 'hello,', a or 'world'
+
+b = ''
+print 'hello,', b or 'world'
+
+classmate = ['Bob','Emma','Amanda']
+print classmate
+
+L = ['Adam','Lisa','Bart','Paul']
+L.pop()
+print L
