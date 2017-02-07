@@ -134,10 +134,97 @@ import math
 # print d['Lisa']
 # print d['Bart']
 
-d = {
-    'Adam':95,
-    'Lisa':85,
-    'Bart':59
-}
-for key in d:
-    print key +':',d[key]
+# d = {
+#     'Adam':95,
+#     'Lisa':85,
+#     'Bart':59
+# }
+# for key in d:
+#     print key +':',d[key]
+
+
+# weekdays = set(['MON','TUE','WED','THU','FRI','SAT','SUN'])
+# x= 'SUN'
+# if x in weekdays:
+#     print 'input ok'
+# else:
+#     print 'input error'
+
+# #请用for循环遍历set,打印出name:score来
+# s = set([('Adam',95),('Lisa',85),('Bart',59)])
+# for x in s:
+#     print x[0]+':',x[1]
+
+# #给定一个set和list，对list中的每个元素，如果在set中，就将其删除，如果不在set中，就将其添加进去
+# s = set(['Adam', 'Lisa', 'Paul'])
+# L = ['Adam', 'Lisa', 'Bart', 'Paul']
+# for x in L:
+#     if x in s:
+#         s.remove(x)
+#     else:
+#         s.add(x)
+# print s
+
+
+
+# print abs(-1)
+
+# L = [1,2,3,4,5,6,7,8,9,10]
+# sum = 0
+# for i in L:
+#     sum = sum +i*i
+# print sum
+
+# #请定义一个 square_of_sum 函数，它接受一个list，返回list中每个元素平方的和
+# def square_of_sum(L):
+#     sum = 0
+#     for i in L:
+#         sum = sum + i*i
+#     return sum
+# print square_of_sum([1, 2, 3, 4, 5])
+# print square_of_sum([-5, 0, 5, 15, 25])
+
+
+# #从一个点移动到另一个点,给出坐标\位移和角度,计算出新的坐标
+# def move(x,y,step,angle):
+#     nx = x+step*math.cos(angle)
+#     ny = y+step*math.sin(angle)
+#     return nx,ny
+# x,y = move(100,100,60,math.pi / 6)
+# print x,y
+
+#
+# def fact(n):
+#     if  n==1:
+#         return 1
+#     return n*fact(n-1)
+# print fact(5)
+# print fact(1)
+
+# def power(x,n):
+#     s = 1
+#     while n>0:
+#         s = s * x
+#         n = n-1
+#     return s
+# print power(4,2)
+
+
+# #定义一个greet()函数,它包含一个默认参数,如果没有传入,打印"Hello,world";如果传入,打印"Hello,xxx"
+# def greet(name = 'world'):
+#     print 'Hello,'+name+'.'
+# greet()
+# greet('Bart')
+
+
+#计算任意个数的平均值
+def average(*args):
+    sum = 0.0
+    if len(args)==0:
+        return sum
+    for x in args:
+        sum = sum +x
+    return sum/len(args)
+print average()
+print average(1, 2)
+print average(1, 2, 2, 3, 4)
