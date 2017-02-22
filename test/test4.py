@@ -217,14 +217,113 @@ import math
 # greet('Bart')
 
 
-#计算任意个数的平均值
-def average(*args):
-    sum = 0.0
-    if len(args)==0:
-        return sum
-    for x in args:
-        sum = sum +x
-    return sum/len(args)
-print average()
-print average(1, 2)
-print average(1, 2, 2, 3, 4)
+# #计算任意个数的平均值
+# def average(*args):
+#     sum = 0.0
+#     if len(args)==0:
+#         return sum
+#     for x in args:
+#         sum = sum +x
+#     return sum/len(args)
+# print average()
+# print average(1, 2)
+# print average(1, 2, 2, 3, 4)
+
+# #利用切片分别取出前10个数;3的倍数;不大于50的5的倍数
+# L = range(1, 101)
+# print L[:10]
+# print L[2::3]
+# print L[4:51:5]
+
+# #利用倒序切片对1-100的list取出最后10个数;最后10个5的倍数
+# L = range(1, 101)
+# print L[-10:]
+# print L[-46::5]
+
+# #对字符串进行切片
+# L='ABCDEFG'
+# print L[:3]
+# print L[::2]
+
+# #upper()方法可以把字符变为大写字母.请设计一个函数,它接受一个字符串,然后返回一个仅首字母变成大写的字符串
+# def firstCharUpper(s):
+#     return s[0:1].upper()+s[1:]
+# print firstCharUpper('hello')
+# print firstCharUpper('sunday')
+# print firstCharUpper('september')
+
+# #请用for循环迭代数列1-100并打印出7的倍数
+# for i in range(1,101):
+#     if i%7==0:
+#         print i
+
+# #打印出索引和对应的元素
+# L = ['Adam','Lisa','Bart','Paul']
+# for index,name in enumerate(L):
+#     print index,'-',name
+
+
+
+# L = ['Adam','Lisa','Bart','Paul']
+# for index,name in enumerate(L):
+#     print index+1,'-',name
+#
+#
+# L = ['Adam', 'Lisa', 'Bart', 'Paul']
+# for index, name in zip(range(1, len(L)+1), L):
+#     print index, '-', name
+
+# d = {'Adam':95,'Lisa':85,'Bart':59}
+# print d.values()
+# for v in d.values():
+#     print v
+
+
+# #给定一个dict,计算所有同学的平均分
+# d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74 }
+# sum = 0.0
+# for i in d.values():
+#     sum = sum +i
+# print sum/len(d.values())
+
+
+# #同时迭代dict的key和value
+# d= {'Adam':95,'Lisa':85,'Bart':59}
+# print d.items()
+# for key,value in d.items():
+#     print key,':',value
+
+# #根据dict打印出name:score,最后再打印出平均分average:score
+# d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74 }
+# sum = 0.0
+# for k, v in d.items():
+#     sum = sum + v
+#     print k,':',v
+# print 'average', ':', sum/len(d.items())
+
+# L =[]
+# for i in range(1,11):
+#     L.append(i*i)
+# print L
+#
+# L=[x * x for x in range(1,11)]
+# print L
+
+# #请利用列表生成式生成列表[1x2,3x4,5x6,……,99X100]
+# #range(1,100,2)可以生成list[1,3,5,7,9……]
+# L = [x * (x+1) for x in range(1,100,2)]
+# print L
+
+# L= [x*x for x in range(1,11) if x%2==0]
+# print L
+
+# #请编写一个函数，它接受一个 list，然后把list中的所有字符串变成大写后返回，非字符串元素将被忽略。
+# #提示：1. isinstance(x, str) 可以判断变量 x 是否是字符串；2. 字符串的 upper() 方法可以返回大写的字母。
+# def toUppers(L):
+#     return [x.upper() for x in L if isinstance(x,str)]
+# print toUppers(['Hello','world',101])
+
+#利用3层for循环的列表生成式,找出对称的3位数.例如121就是对称数,因为从右到左倒过来还是121.
+L = [m*100+n*10+c for m in range(1,10)  for n in range(0,10) for c in range(0,10) if m==c]
+print L
+
