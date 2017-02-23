@@ -22,9 +22,40 @@ import math
 # print  map(f,['adam', 'LISA', 'barT'])
 
 
-def prod(x, y):
-    return x*y
+# #请利用reduce()来求积
+# def prod(x, y):
+#     return x*y
+# print reduce(prod, [2, 4, 5, 7, 12])
 
-print reduce(prod, [2, 4, 5, 7, 12])
+# #取出一个list中的奇数
+# def is_odd(x):
+#     if x%2==1:
+#        return x
+# print filter(is_odd,[1,4,6,7,9,12,17])
 
+# #利用filter()过滤出1~100中平方根是整数的数,即结果应该是:[1,4,9,16,25,36,49,64,81,100]
+# def is_sqr(x):
+#     r = int(math.sqrt(x))        #取出x的平方根的整数
+#     return r*r== x               #返回这个整数的平方!!!
+# print filter(is_sqr,range(1, 101))         #整数的平方的范围是1~101,不包含101
+
+
+# def t(s1,s2):
+#     u1 = s1.upper()
+#     u2 = s2.upper()
+#     return u1,u2
+# print t('bob','about')
+
+
+#对字符串排序时,有时候忽略大小写排序更符合习惯.请利用sorted()高阶函数,实现忽略大小写排序的算法.
+#分析:对于比较函数cmp_ignore_case(s1,s2),要忽略大小写比较,就是先把两个字符串都变成大写(或者都变成小写),再比较
+def cmp_ignore_case(s1,s2):
+    u1 = s1.upper()
+    u2 = s2.upper()
+    if u1 >u2:
+        return 1
+    if u1<u2:
+        return -1
+    return 0
+print sorted(['bob','about','Zoo','Credit'],cmp_ignore_case)
 
